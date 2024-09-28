@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner_container">
+                <div class="header_box">
+                    <h1>Cryptocurrency Watcher</h1>
+                </div>
+                
+                <div class="content_box">
+                        <!-- Toggle buttons for Cryptocurrency selection -->
+                        <div class="crypto-selector">
+                            <div class="crypto-selector-header"></div>
+                            <!-- <label>Select Cryptocurrency:</label> -->
+                            <div class="toggle-group" id="crypto-toggle">
+                                <button class="toggle-btn active" data-value="ethusdt">
+                                    <img src="ethereum.png" alt="eth">
+                                    <span>ETH/USDT</span>
+                                </button>
+                                <button class="toggle-btn" data-value="bnbusdt">
+                                    <img src="bnb.png" alt="bnb">
+                                    <span>BNB/USDT</span>
+                                </button>
+                                <button class="toggle-btn" data-value="dotusdt">
+                                    <img src="dot.png" alt="dot">
+                                    <span>DOT/USDT</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="chart_content_container">
+                            <!-- Toggle buttons for Time Interval selection -->
+                            <div class="interval-selector">
+                                <!-- <label>Select Time Interval:</label> -->
+                                <div class="toggle-group" id="interval-toggle">
+                                    <button class="toggle-btn active" data-value="1m">1 M</button>
+                                    <button class="toggle-btn" data-value="3m">3 M</button>
+                                    <button class="toggle-btn" data-value="5m">5 M</button>
+                                </div>
+                            </div>
+                            <!-- Lightweight Chart container -->
+                            <div id="chart-container"></div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
